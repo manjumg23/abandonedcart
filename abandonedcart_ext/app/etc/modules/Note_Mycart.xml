@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- this extension used to trigger email to customer to notify their cart items-->
+<config>
+    <modules>
+        <Note_Mycart>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Note_Mycart>
+    </modules>
+</config> 

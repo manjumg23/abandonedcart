@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+ 
+<config>
+    <modules>
+        <Note_Mycart>
+            <version>0.0.0.1</version>
+        </Note_Mycart>
+    </modules>
+	
+	
+
+	<global>
+	
+		<models><!-- Email purpose-->
+            <note_mycart>
+                <class>Note_Mycart_Model</class>
+            </note_mycart>
+			
+            <catalog>
+                <class>Mage_Catalog_Model</class>
+                <resourceModel>catalog_resource</resourceModel>
+            </catalog>
+        </models><!-- Email purpose-->
+	
+		<blocks>
+            <note_mycart>
+                <class>Note_Mycart_Block</class>
+            </note_mycart>
+        </blocks>
+		
+		<helpers>
+				<note_mycart>
+					<class>Note_Mycart_Helper</class>
+				</note_mycart>
+		</helpers>
+		       
+		
+	<template>
+		<email>
+			<note_cart>
+				<label>Note My cart Module</label>
+				<file>Notecart/note_my_cart.html</file>
+				<type>html</type>
+			</note_cart>
+		</email>
+	</template>
+        
+	</global>	
+
+
+	<default>
+        <tab1>
+            <general>
+                <text_field>Default value</text_field>
+                <textarea>Hi, you have items in cart. come back!!  </textarea>
+                <dropdown>key2</dropdown>
+                <multiple_dropdown>key1,key2</multiple_dropdown>
+                <time>11,30,45</time>
+                <active>0</active>
+                <boolean>1</boolean>
+                <dependant_text_field>Default value</dependant_text_field>
+            </general>
+        </tab1>
+    </default>
+	
+	<frontend>
+        <routers>
+            <Note_Mycart_SomeFreeRouterName111>
+                <use>standard</use>
+                <args>
+                    <module>Note_Mycart</module>
+                    <frontName>checking</frontName>
+                </args>
+            </Note_Mycart_SomeFreeRouterName111>
+        </routers>
+    </frontend>
+    
+	<admin>
+        <routers>
+			
+            <adminhtml>
+                <args>
+                    <modules>
+                        <note_mycart before="Mage_Adminhtml">Note_Mycart_Adminhtml</note_mycart>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+	
+</config>

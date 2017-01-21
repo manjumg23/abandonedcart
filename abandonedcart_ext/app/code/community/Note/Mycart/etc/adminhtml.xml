@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+ 
+<config>
+    <menu>
+		
+		<report>
+			<children>
+				<shopcart>
+                     <children>
+
+                        <Note_Mycart translate="title" module="note_mycart">
+							<sort_order>20</sort_order>
+                            <title>Abandoned carts Notification Email</title>
+                            <!--<action>adminhtml/report_shopcart/abandoned</action>-->
+							<action>adminhtml/report_shopcart/mailmycart</action>
+                        </Note_Mycart>
+						
+                    </children>
+                </shopcart>
+			</children>
+		</report>
+		
+    </menu>
+	
+	  <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <tab1>
+                                        <title>Tab #1</title> <!-- Used in resources tree -->
+                                    </tab1>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+	
+</config>
