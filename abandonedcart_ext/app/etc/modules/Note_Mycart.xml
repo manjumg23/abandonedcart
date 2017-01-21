@@ -3,7 +3,7 @@
 <config>
     <modules>
         <Note_Mycart>
-            <active>true</active>
+            <active>false</active>
             <codePool>community</codePool>
         </Note_Mycart>
     </modules>
